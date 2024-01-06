@@ -1,0 +1,1 @@
+- In `$HOME/.Xdefaults` `URxvt.geometry: 400x400` to fix terminal prompt spawning in the middle of the screen.
