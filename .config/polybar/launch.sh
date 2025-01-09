@@ -14,8 +14,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 #   polybar --reload main &
 # fi
 
-MONITOR=DP-0 polybar --reload main &
-MONITOR=HDMI-0 polybar --reload secondary &
+MONITOR=eDP polybar --reload main &
 
 # Launch bar1 and bar2
 # polybar example &
