@@ -1,0 +1,102 @@
+#!/bin/bash
+
+# grep from myLogs.txt
+
+path=~/Dropbox/Other/myLogs.txt
+help_d=$'Usage: catl -d -n..31\nfor "-d" search: catl -d 0'
+help_l=$'Usage: catl -l 1..n\nfor "-l" search: catl -l 0'
+help_h=$'Usage: catl [-h] [-d INT] [-l INT]
+
+Options:
+  -d -n..31\tGrep entries with given day of the month.
+	\tOr a negative value for N day(s) ago.
+	\t-d 0 to grep "-d"
+  -l 1..n\tGrep the last N entries.
+	\t-l 0 to grep "-l"
+  -h, --help\tShow this message and exit.
+	\t-h/--help 0 to grep "-h" or "--help"'
+
+
+while [ $# -gt 0 ]
+do
+	case $1 in
+		-h|--help)
+			if [[ $2 && $2 -eq 0 ]]; then
+				arg=$1
+			else
+				echo "$help_h"
+				exit 0
+			fi
+			shift 2
+		;;
+		-l)
+			if [[ $2 && $2 -gt 0 ]]; then
+				length=$2
+			elif [[ $2 && $2 -eq 0 ]]; then
+				arg=$1
+			else
+				echo "$help_l"
+				exit 1
+			fi
+			shift 2
+		;;
+		-d)
+			# FIXME: -d some_string will be accepted for some reason
+			# apparently this was also the case prior to removing $2 -gt 0
+			# for some reason $2 -eq 0 accepts strings
+			if [[ $2 && $2 -lt 32 ]]; then
+				day=$2
+			elif [[ $2 && $2 -eq 0 ]]; then
+				arg=$1
+			else
+				echo "$help_d"
+				exit 1
+			fi
+			shift 2
+		;;
+		*)
+			if [ -z "${arg+x}" ]; then
+				arg="$1"
+				shift 1
+			fi
+		;;
+	esac
+done
+
+# if no arg && no length && no day
+# set today as arg
+if [[ -z "${arg+x}" && -z "${length+x}" && -z "${day+x}" ]]; then
+	arg=`date +%Y.%m.%d`
+fi
+
+# format today's date with "-d N day ago" if given a negative value through -d
+# set arg as date of the given day
+# append a leading 0 if only 1 digit is entered
+if [ -n "${day+x}" ]; then
+	if [[ ${day} -lt 0 ]]; then
+		arg=`date +%Y.%m.%d -d "${day#-} day ago"`
+	else
+		if [[ ${#day} == 1 ]]; then
+			day="0$day"
+		fi
+		arg=`date +%Y.%m.`$day
+	fi
+fi
+
+# if length is provided tail accordingly
+# -l %d -d %d
+# -l %d %arg
+# ---
+# -l %d
+# else just pipe arg into less without tail
+# -d %d
+# %arg
+if [ -n "${length+x}" ]; then
+	if [ -n "${arg+x}" ]; then
+		cat $path | grep -a -i --color=always -e "$arg" | tail -$length | less -R
+	else
+		cat $path | tail -$length | less
+	fi
+else
+	cat $path | grep -a -i --color=always -e "$arg" | less -R
+fi
