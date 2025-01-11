@@ -43,10 +43,10 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ################################################################################################
 
 exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
+#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
 
@@ -226,7 +226,7 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
 # switch to workspace with urgent window automatically
-for_window [urgent=latest] focus
+# for_window [urgent=latest] focus
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -453,7 +453,7 @@ bindsym XF86Favorites exec amixer sset Master toggle
 
 
 # wallpaper
-exec_always feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
 
 
 # custom binds
@@ -472,8 +472,38 @@ bindsym Control+Mod1+Delete exec ~/.scripts/_others/scrlock.sh
 
 # start with
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id dropbox start
+exec ~/.scripts/run_log_recorder
+exec blueman-applet
+# turn on num lock on start
+exec xdotool key Num_Lock
 
 
 # assign to workspaces
 assign [class="Google-chrome"] $ws1
 assign [class="code-oss"] $ws2
+assign [class="Sl"] $ws4
+assign [class="Pcmanfm"] $ws6
+
+# after launch assigns
+for_window [class="Sl"] floating enable
+
+
+########################
+### additional terms ###
+########################
+
+# ws4 gotop and an empty terminal for catl and dict
+
+# set $t_ws4_1 "ws4_gotop_term"
+set $t_ws4_2 "ws4_empty_term"
+
+# gotop doesn't work for whatever reason
+# exec --no-startup-id urxvt -name $t_ws4_1 -e gotop
+exec --no-startup-id terminal -name $t_ws4_2
+
+# assign [instance=$t_ws4_1] $ws4
+assign [instance=$t_ws4_2] $ws4
+
+# for_window [instance=$t_ws4_1] floating enable resize set 724 514, move position 30 30
+for_window [instance=$t_ws4_2] floating enable resize set 724 414, move position 598 180

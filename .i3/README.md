@@ -12,3 +12,15 @@
   source envname/bin/activate
   deactivate
   ```
+- `noto-fonts-cjk` for Japanese characters, `noto-fonts-emoji` for emoji, not that that really matters.
+-  ~~`rclone config` into Google Drive connection, setting root folder is done in advanced config when prompted.~~
+	-  ~~`rclone ls mylogs_gd:` to check if successful.~~
+	-  ~~`rclone mount mylogs_gd: ~/mylogs_local --daemon` to mount locally.~~
+	-  ~~`export VISUAL=nano; crontab -e` to add a cronjob to re-mount on reboot: `@reboot rclone mount mylogs_gd: ~/mylogs_local --daemon`.~~
+	- opted to go back to Dropbox due to entry lag, as well as some writing permission errors and file duplication
+- `pulseaudio` and `pavucontrol` for audio controls, although, possibly simply changing volumeicon's device might help?
+	- actually `manjaro-pipewire` which replaces `pulseaudio`, which lets me use airpods directly. has to `forget device` from iphone, first
+- `sudo systemctl enable bluetooth.service` for bluetooth, `blueman-applet` for its usage
+- built-in `np-applet` seems to be more than capable of wi-fi and of course wired connections 
+- `timeshift` for back-ups, of course.
+- `xprop | grep WM_CLASS | awk '{ print $4 }'` for class grabbing of anything.
