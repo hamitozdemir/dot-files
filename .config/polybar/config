@@ -54,8 +54,8 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
-font-3 = FontAwesome5Free:style=Solid:pixelsize=12:antialias=true;1
-font-4 = FontAwesome5Brands:style=Solid:pixelsize=12:antialias=true;1
+font-3 = Font Awesome 6 Free:style=Solid:pixelsize=12:antialias=true;1
+font-4 = Font Awesome 6 Brands:style=Solid:pixelsize=12:antialias=true;1
 font-5 = Bitstream Vera Sans Mono:pixelsize=10;1
 
 modules-left = bspwm i3
@@ -298,7 +298,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp2s0
+interface = enp3s0
 interval = 3.0
 
 ;format-connected-padding = 2
@@ -317,7 +317,7 @@ format-disconnected =
 
 [module/eth2]
 type = internal/network
-interface = enp2s0
+interface = enp3s0
 interval = 3.0
 
 ;format-connected-padding = 2

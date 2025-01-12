@@ -24,3 +24,4 @@
 - built-in `np-applet` seems to be more than capable of wi-fi and of course wired connections 
 - `timeshift` for back-ups, of course.
 - `xprop | grep WM_CLASS | awk '{ print $4 }'` for class grabbing of anything.
+- `ip addr` to get correct network interface for network module of `polybar`.
