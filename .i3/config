@@ -454,6 +454,7 @@ bindsym XF86Favorites exec amixer sset Master toggle
 
 # wallpaper
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
+exec wal -R -f ~/.scripts/pywal_colour_selector/dark/base16-chalk.json
 
 
 # custom binds
@@ -477,6 +478,8 @@ exec ~/.scripts/run_log_recorder
 exec blueman-applet
 # turn on num lock on start
 exec xdotool key Num_Lock
+# not launching steam on boot since it's a laptop
+# exec --no-startup-id steam
 
 
 # assign to workspaces
@@ -484,9 +487,12 @@ assign [class="Google-chrome"] $ws1
 assign [class="code-oss"] $ws2
 assign [class="Sl"] $ws4
 assign [class="Pcmanfm"] $ws6
+assign [class="steam"] $ws7
 
 # after launch assigns
 for_window [class="Sl"] floating enable
+# so the friends section is smaller than the main window
+for_window [class="steam"] resize shrink width 10 px or 10 ppt
 
 
 ########################
@@ -506,4 +512,4 @@ exec --no-startup-id terminal -name $t_ws4_2
 assign [instance=$t_ws4_2] $ws4
 
 # for_window [instance=$t_ws4_1] floating enable resize set 724 514, move position 30 30
-for_window [instance=$t_ws4_2] floating enable resize set 724 414, move position 598 180
+for_window [instance=$t_ws4_2] floating enable move position 598 180
