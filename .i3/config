@@ -500,17 +500,17 @@ for_window [class="steam"] resize shrink width 10 px or 10 ppt
 ### additional terms ###
 ########################
 
-# ws4 gotop and an empty terminal for catl and dict
+# ws4 vtop and an empty terminal for catl and dict
 
-# set $t_ws4_1 "ws4_gotop_term"
+set $t_ws4_1 "ws4_vtop_term"
 set $t_ws4_2 "ws4_empty_term"
 
-# gotop doesn't work for whatever reason
-# exec --no-startup-id urxvt -name $t_ws4_1 -e gotop
+exec --no-startup-id terminal -name $t_ws4_1 -e vtop
 exec --no-startup-id terminal -name $t_ws4_2
 
-# assign [instance=$t_ws4_1] $ws4
+assign [instance=$t_ws4_1] $ws4
 assign [instance=$t_ws4_2] $ws4
 
 # for_window [instance=$t_ws4_1] floating enable resize set 724 514, move position 30 30
+for_window [instance=$t_ws4_1] floating enable move position 598 630
 for_window [instance=$t_ws4_2] floating enable move position 598 180
