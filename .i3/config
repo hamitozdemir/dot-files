@@ -454,8 +454,8 @@ bindsym XF86Favorites exec amixer sset Master toggle
 
 # wallpaper
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
-exec wal -R -f ~/.scripts/pywal_colour_selector/dark/base16-chalk.json
-
+# exec wal -R -f ~/.scripts/pywal_colour_selector/dark/base16-chalk.json
+exec wal -R -i ~/Pictures/wallpapers/wallpaper.jpg
 
 # custom binds
 bindsym $mod+Shift+x exec ~/.scripts/_others/scrlock.sh
@@ -506,7 +506,7 @@ for_window [class="steam"] resize shrink width 10 px or 10 ppt
 set $t_ws4_1 "ws4_vtop_term"
 set $t_ws4_2 "ws4_empty_term"
 
-exec --no-startup-id terminal -name $t_ws4_1 -e vtop
+exec --no-startup-id terminal -name $t_ws4_1 -e bvtop
 exec --no-startup-id terminal -name $t_ws4_2
 
 assign [instance=$t_ws4_1] $ws4

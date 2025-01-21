@@ -123,4 +123,8 @@ HISTSIZE=
 HISTFILESIZE=
 
 # ALIASES
-alias gcls='xprop | grep WM_CLASS | awk \'{ print $4 }\''
+alias gcls="xprop | grep WM_CLASS | awk '{ print $4 }'"
+
+
+# clear sort of fixes prompt spawning in the middle & get correct pywal colour
+clear && cat ~/.cache/wal/sequences

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# launch vtop with pywal colours with brew theme
+
+clear && cat ~/.cache/wal/sequences
+vtop -t brew
