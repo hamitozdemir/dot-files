@@ -25,3 +25,5 @@
 - `timeshift` for back-ups, of course.
 - `xprop | grep WM_CLASS | awk '{ print $4 }'` for class grabbing of anything.
 - `ip addr` to get correct network interface for network module of `polybar`.
+- `ibus` and `ibus-kkc` for Japanese input, couldn't compile `ibus-mozc`, unfortunately.
+	- `ibus-daemon` for ongoing usage. `ibus-setup` for changing up keys and layouts, etc.
