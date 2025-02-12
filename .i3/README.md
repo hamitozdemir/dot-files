@@ -1,4 +1,5 @@
-- In `$HOME/.Xdefaults` `URxvt.geometry: 400x400` to fix terminal prompt spawning in the middle of the screen.
+- ~~In `$HOME/.Xdefaults` `URxvt.geometry: 400x400` to fix terminal prompt spawning in the middle of the screen.~~
+	- This messes up floating terminal size, making it larger than the screen for some reason, so instead `clear` in `.bashrc`.
 - For [zapret](https://github.com/bol-van/zapret), [source](https://btt.community/t/zapret-kullanarak-linux-icerisinde-erisim-engelli-siteleri-kullanmak/807):
   ```bash
   # change dns to 1.1.1.1 using nmtui
@@ -17,13 +18,14 @@
 	-  ~~`rclone ls mylogs_gd:` to check if successful.~~
 	-  ~~`rclone mount mylogs_gd: ~/mylogs_local --daemon` to mount locally.~~
 	-  ~~`export VISUAL=nano; crontab -e` to add a cronjob to re-mount on reboot: `@reboot rclone mount mylogs_gd: ~/mylogs_local --daemon`.~~
-	- opted to go back to Dropbox due to entry lag, as well as some writing permission errors and file duplication
+	- opted to go back to Dropbox due to entry lag, as well as some writing permission errors and file duplication.
 - `pulseaudio` and `pavucontrol` for audio controls, although, possibly simply changing volumeicon's device might help?
-	- actually `manjaro-pipewire` which replaces `pulseaudio`, which lets me use airpods directly. has to `forget device` from iphone, first
-- `sudo systemctl enable bluetooth.service` for bluetooth, `blueman-applet` for its usage
-- built-in `np-applet` seems to be more than capable of wi-fi and of course wired connections 
+	- actually `manjaro-pipewire` which replaces `pulseaudio`, which lets me use airpods directly. has to `forget device` from iphone, first.
+- `sudo systemctl enable bluetooth.service` for bluetooth, `blueman-applet` for its usage.
+- built-in `np-applet` seems to be more than capable of wi-fi and of course wired connections. 
 - `timeshift` for back-ups, of course.
 - `xprop | grep WM_CLASS | awk '{ print $4 }'` for class grabbing of anything.
 - `ip addr` to get correct network interface for network module of `polybar`.
 - `ibus` and `ibus-kkc` for Japanese input, couldn't compile `ibus-mozc`, unfortunately.
 	- `ibus-daemon` for ongoing usage. `ibus-setup` for changing up keys and layouts, etc.
+- Install `proton-vpn-gtk-app` for `protonvpn-app`.
