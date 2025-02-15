@@ -502,6 +502,8 @@ for_window [class="Sl"] floating enable
 for_window [class="steam"] resize shrink width 10 px or 10 ppt
 for_window [class="Protonvpn-app"] floating enable
 for_window [class="zoom"] floating enable
+for_window [class="pavucontrol"] floating enable
+for_window [class="Blueman-manager"] floating enable
 
 
 ########################
