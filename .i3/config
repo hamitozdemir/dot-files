@@ -489,8 +489,11 @@ exec xdotool key Num_Lock
 assign [class="Google-chrome"] $ws1
 assign [class="code-oss"] $ws2
 assign [class="Sl"] $ws4
+assign [class="zoom"] $ws5
 assign [class="Pcmanfm"] $ws6
 assign [class="steam"] $ws7
+assign [class="Protonvpn-app"] $ws8
+assign [class="Stremio"] $ws8
 assign [class="Spotify"] $ws9
 
 # after launch assigns
@@ -498,6 +501,7 @@ for_window [class="Sl"] floating enable
 # so the friends section is smaller than the main window
 for_window [class="steam"] resize shrink width 10 px or 10 ppt
 for_window [class="Protonvpn-app"] floating enable
+for_window [class="zoom"] floating enable
 
 
 ########################
