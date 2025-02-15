@@ -452,6 +452,8 @@ bindsym XF86HomePage exec exec amixer sset Master 5%-
 bindsym XF86Favorites exec amixer sset Master toggle
 
 
+# screen tear fix™
+exec_always xrandr --output eDP --set TearFree on
 # wallpaper
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
 # exec wal -R -f ~/.scripts/pywal_colour_selector/dark/base16-chalk.json
