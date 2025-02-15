@@ -1,3 +1,4 @@
+appflowy-bin
 dropbox
 feh
 gnome-screenshot
