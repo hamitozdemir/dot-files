@@ -58,14 +58,11 @@ font-3 = Font Awesome 6 Free:style=Solid:pixelsize=12:antialias=true;1
 font-4 = Font Awesome 6 Brands:style=Solid:pixelsize=12:antialias=true;1
 font-5 = Bitstream Vera Sans Mono:pixelsize=10;1
 
-modules-left = bspwm i3
+modules-left = i3
 # not sure if running eth twice is healthy
 modules-center = spotify eth eth2
-modules-right = filesystem battery pulseaudio memory cpu system-uptime-pretty date powermenu
+modules-right = filesystem battery pulseaudio memory cpu system-uptime-pretty date tray powermenu
 
-tray-position = ${env:TRAY_POSITION:right}
-tray-padding = 2
-;tray-background = #0063ff
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -543,3 +540,7 @@ exec = ~/.config/polybar/scripts/system-uptime-pretty.sh
 ;format-padding = 2
 format-underline = #f0f
 interval = 60
+
+[module/tray]
+type = internal/tray
+tray-padding = 2
