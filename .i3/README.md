@@ -29,3 +29,8 @@
 - `ibus` and `ibus-kkc` for Japanese input, couldn't compile `ibus-mozc`, unfortunately.
 	- `ibus-daemon` for ongoing usage. `ibus-setup` for changing up keys and layouts, etc.
 - Install `proton-vpn-gtk-app` for `protonvpn-app`.
+- Dump manually* installed packages using `pacman -Qqe | grep -v "$(awk '{print $1}' /desktopfs-pkgs.txt)" > ~/dump.txt`
+  - Checking both the following, it seems to be pretty much capable of dumping both default and AUR packages:
+	  - `comm -12 <(grep -Poe '\[ALPM\] installed \K\S*' /var/log/pacman.log | sort | uniq) <(pacman -Qeqn | sort)`
+		- `comm -12 <(grep -Poe '\[ALPM\] installed \K\S*' /var/log/pacman.log | sort | uniq) <(pacman -Qeqm | sort)`
+		- Only exeptions seem to be noto-fonts mentioned above, as well as CPU driver related packages.
