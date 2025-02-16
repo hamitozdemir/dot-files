@@ -26,8 +26,9 @@ font xft:URWGothic-Book 11
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
+set $term alacritty
 # start a terminal
-bindsym $mod+Return exec terminal
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -55,13 +56,13 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+bindsym $mod+Ctrl+b exec $term -e 'bmenu'
 # FIXME: couldn't get $BROWSER to work for some reason, it exists in .profile but nothing
 bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
+bindsym $mod+F5 exec $term -e 'mocp'
 # bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -459,6 +460,7 @@ exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/wallpaper.jpg
 # exec wal -R -f ~/.scripts/pywal_colour_selector/dark/base16-chalk.json
 exec wal -R -i ~/Pictures/wallpapers/wallpaper.jpg
 
+
 # custom binds
 bindsym $mod+Shift+x exec ~/.scripts/_others/scrlock.sh
 bindsym $mod+Shift+z exec polybar-msg cmd toggle
@@ -520,12 +522,12 @@ for_window [class="Blueman-manager"] floating enable
 set $t_ws4_1 "ws4_vtop_term"
 set $t_ws4_2 "ws4_empty_term"
 
-exec --no-startup-id terminal -name $t_ws4_1 -e bvtop
-exec --no-startup-id terminal -name $t_ws4_2
+exec --no-startup-id $term -T $t_ws4_1 -e bvtop
+exec --no-startup-id $term -T $t_ws4_2
 
-assign [instance=$t_ws4_1] $ws4
-assign [instance=$t_ws4_2] $ws4
+assign [title=$t_ws4_1] $ws4
+assign [title=$t_ws4_2] $ws4
 
 # for_window [instance=$t_ws4_1] floating enable resize set 724 514, move position 30 30
-for_window [instance=$t_ws4_1] floating enable move position 598 630
-for_window [instance=$t_ws4_2] floating enable move position 598 180
+for_window [title=$t_ws4_1] floating enable move position 598 625, resize set 724 450
+for_window [title=$t_ws4_2] floating enable move position 598 170, resize set 724 450
