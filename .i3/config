@@ -473,6 +473,7 @@ bindsym $mod+F4 exec pamac-manager
 bindsym Control+Mod1+Delete exec ~/.scripts/_others/scrlock.sh
 # couldn't get gchat to bind to a specific workspace, but it's a separate window at the very least
 bindsym $mod+F6 exec google-chrome-stable --app='https://mail.google.com/mail/u/1/#chat/home'
+bindsym $mod+b exec notify-send -i terminal "$(acpi -b | cut -d " " -f 5 | cut -c-5 | sed 's/$/    remaining/')"
 
 # start with
 exec_always --no-startup-id ~/.config/polybar/launch.sh
