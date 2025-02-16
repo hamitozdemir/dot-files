@@ -529,5 +529,5 @@ assign [title=$t_ws4_1] $ws4
 assign [title=$t_ws4_2] $ws4
 
 # for_window [instance=$t_ws4_1] floating enable resize set 724 514, move position 30 30
-for_window [title=$t_ws4_1] floating enable move position 598 625, resize set 724 450
-for_window [title=$t_ws4_2] floating enable move position 598 170, resize set 724 450
+for_window [title=$t_ws4_1] floating enable move position 598 630
+for_window [title=$t_ws4_2] floating enable move position 598 180
