@@ -1,4 +1,6 @@
+alacritty
 appflowy-bin
+discord
 dropbox
 feh
 gnome-screenshot
@@ -7,9 +9,11 @@ hunspell-en_us
 ibus-kkc
 manjaro-pipewire
 mpv
+neo-matrix
 neofetch
 nnn
 pavucontrol
+pipes.sh
 plocate
 polybar
 proton-vpn-gtk-app

@@ -502,6 +502,7 @@ assign [class="Protonvpn-app"] $ws8
 assign [class="Stremio"] $ws8
 assign [class="AppFlowy"] $ws8
 assign [class="Spotify"] $ws9
+assign [class="discord"] $ws9
 
 # after launch assigns
 for_window [class="Sl"] floating enable
@@ -511,6 +512,7 @@ for_window [class="Protonvpn-app"] floating enable
 for_window [class="zoom"] floating enable
 for_window [class="pavucontrol"] floating enable
 for_window [class="Blueman-manager"] floating enable
+for_window [class="discord"] layout tabbed
 
 
 ########################
