@@ -494,6 +494,7 @@ exec xdotool key Num_Lock
 # assign to workspaces
 assign [class="Google-chrome"] $ws1
 assign [class="code-oss"] $ws2
+assign [class="Darktable"] $ws2
 assign [class="Sl"] $ws4
 assign [class="zoom"] $ws5
 assign [class="Pcmanfm"] $ws6
