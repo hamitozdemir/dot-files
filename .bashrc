@@ -126,6 +126,7 @@ HISTFILESIZE=
 alias gcls="xprop | grep WM_CLASS | awk '{ print $4 }'"
 alias dmppkg="pacman -Qqe | grep -v \"$(awk '{print $1}' /desktopfs-pkgs.txt)\" > ~/git/dot-files/extras/installed_packages.txt && echo dumped installed packages."
 alias gpdf="cd ~/git/dot-files/ && git push"
+alias vn5="vnstati -5 -L --scale 200 -o /tmp/vn5.png && sxiv /tmp/vn5.png &"
 
 
 # clear sort of fixes prompt spawning in the middle & get correct pywal colour
