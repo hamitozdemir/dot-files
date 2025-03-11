@@ -1,5 +1,5 @@
 #!/bin/bash
 
-# display the status of the battery with time until charged/depletion or "try again" if zero rate
+# display the status of the battery with time until charged/depletion, "try again" if zero rate, "full" at actual™ 100% full
 
-notify-send -i terminal "$(acpi -b | awk -F', ' '/zero rate/ { print "  try again in a second"; exit } /Discharging|Charging/ { print "  " $3 ; exit }')"
+notify-send -i terminal "$(acpi -b | awk -F', ' '/zero rate/ { print "   try again in a second"; exit } /Discharging|Charging/ { print "   " $3 ; exit } /Full/ { print "   full" ; exit }')"
