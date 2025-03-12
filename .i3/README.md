@@ -1,11 +1,12 @@
 - ~~In `$HOME/.Xdefaults` `URxvt.geometry: 400x400` to fix terminal prompt spawning in the middle of the screen.~~
 	- This messes up floating terminal size, making it larger than the screen for some reason, so instead `clear` in `.bashrc`.
-- For [zapret](https://github.com/bol-van/zapret), [source](https://btt.community/t/zapret-kullanarak-linux-icerisinde-erisim-engelli-siteleri-kullanmak/807):
+- For [zapret](https://github.com/bol-van/zapret), [source](https://btt.community/t/linux-zapret-kurulum-rehberi/15989):
   ```bash
-  # change dns to 1.1.1.1 using nmtui
+  # install dnscrypt-proxy
   sudo ./install_bin.sh
   sudo ./blockcheck.sh
   sudo ./install_easy.sh # <- replace necessary arguments here, e.g. change mode to nfqws and update with blockcheck's args.
+	# NFQWS_OPT="--dpi-desync=fakeddisorder --dpi-desync-ttl=1 --dpi-desync-autottl=5 --dpi-desync-split-pos=1" # works now
   ```
 - Setting up Python virtual environment:
   ```

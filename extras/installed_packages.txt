@@ -2,12 +2,14 @@ alacritty
 appflowy-bin
 darktable
 discord
+dnscrypt-proxy
 dropbox
 feh
 gnome-screenshot
 google-chrome
 hunspell-en_us
 ibus-kkc
+ipset
 manjaro-pipewire
 mpv
 neo-matrix
