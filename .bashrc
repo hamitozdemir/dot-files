@@ -128,6 +128,17 @@ alias dmppkg="pacman -Qqe | grep -v \"$(awk '{print $1}' /desktopfs-pkgs.txt)\" 
 alias gpdf="cd ~/git/dot-files/ && git push"
 alias vn5="vnstati -5 -L --scale 200 -o /tmp/vn5.png && sxiv /tmp/vn5.png &"
 
+# FUNCTIONS
+function zapret() {
+	case $1 in
+		0|"off") local status="stop" ;;
+		1|"on") local status="start" ;;
+		*) echo "usage: zapret [0-1] | [off-on]" ; return ;;
+	esac
+
+	sudo systemctl $status zapret.service && echo "zapret.service: $1"
+}
+
 
 # clear sort of fixes prompt spawning in the middle & get correct pywal colour
 clear && cat ~/.cache/wal/sequences
