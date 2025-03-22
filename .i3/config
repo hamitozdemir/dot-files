@@ -489,6 +489,7 @@ exec --no-startup-id ibus-daemon
 exec xdotool key Num_Lock
 # not launching steam on boot since it's a laptop
 # exec --no-startup-id steam
+exec --no-startup-id protonvpn-app
 
 
 # assign to workspaces
