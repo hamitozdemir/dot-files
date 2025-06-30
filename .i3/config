@@ -66,8 +66,8 @@ bindsym $mod+F5 exec $term -e 'mocp'
 # bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot -sc
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -s
+bindsym Print exec --no-startup-id scrot -s /tmp/scrot-screenshot.png && xclip -selection clipboard -t image/png -i /tmp/scrot-screenshot.png && rm /tmp/scrot-screenshot.png
+bindsym $mod+Print --release exec --no-startup-id scrot '%Y-%m-%d-%H%M%S_$wx$h_scrot.png' -s -e 'xclip -selection clipboard -t image/png -i $f && mv $f ~/Pictures/screenshots/'
 # bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
