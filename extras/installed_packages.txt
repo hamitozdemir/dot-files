@@ -1,14 +1,18 @@
 alacritty
 appflowy-bin
+bluetuith-bin
 darktable
 discord
 dnscrypt-proxy
 dropbox
 feh
+gnome-disk-utility
 gnome-screenshot
 google-chrome
 hunspell-en_us
 ibus-kkc
+ibus-libpinyin
+ifuse
 ipset
 manjaro-pipewire
 mpv
@@ -20,6 +24,8 @@ pipes.sh
 plocate
 polybar
 proton-vpn-gtk-app
+qbittorrent
+shotcut
 sox
 spotify
 stremio
