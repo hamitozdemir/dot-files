@@ -29,6 +29,7 @@
 - `ip addr` to get correct network interface for network module of `polybar`.
 - `ibus` and `ibus-kkc` for Japanese input, couldn't compile `ibus-mozc`, unfortunately.
 	- `ibus-daemon` for ongoing usage. `ibus-setup` for changing up keys and layouts, etc.
+	- `ibus-pinyin` for Chinese input.
 - Install `proton-vpn-gtk-app` for `protonvpn-app`.
 - Dump manually* installed packages using `pacman -Qqe | grep -v "$(awk '{print $1}' /desktopfs-pkgs.txt)" > ~/dump.txt`
   - Checking both the following, it seems to be pretty much capable of dumping both default and AUR packages:
