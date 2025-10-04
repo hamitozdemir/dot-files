@@ -499,6 +499,7 @@ assign [class="Darktable"] $ws2
 assign [class="Godot"] $ws2
 assign [class="Blender"] $ws3
 assign [class="krita"] $ws3
+assign [class="laigter"] $ws3
 assign [class="Sl"] $ws4
 assign [class="zoom"] $ws5
 assign [class="Pcmanfm"] $ws6
@@ -521,6 +522,7 @@ for_window [class="discord"] layout tabbed
 for_window [class="Godot"] floating enable
 for_window [class="Blender"] layout tabbed
 for_window [class="krita"] layout tabbed
+for_window [class="laigter"] layout tabbed
 
 
 
