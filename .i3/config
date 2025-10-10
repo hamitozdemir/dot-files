@@ -500,6 +500,7 @@ assign [class="Godot"] $ws2
 assign [class="Blender"] $ws3
 assign [class="krita"] $ws3
 assign [class="laigter"] $ws3
+assign [class="Material Maker"] $ws3
 assign [class="Sl"] $ws4
 assign [class="zoom"] $ws5
 assign [class="Pcmanfm"] $ws6
