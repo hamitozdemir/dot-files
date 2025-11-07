@@ -497,6 +497,7 @@ assign [class="Google-chrome"] $ws1
 assign [class="code-oss"] $ws2
 assign [class="Darktable"] $ws2
 assign [class="Godot"] $ws2
+assign [class="renpy"] $ws2
 assign [class="Blender"] $ws3
 assign [class="krita"] $ws3
 assign [class="laigter"] $ws3
@@ -527,6 +528,7 @@ for_window [class="krita"] layout tabbed
 for_window [class="Material Maker"] layout tabbed
 for_window [class="Aseprite"] layout tabbed
 for_window [class="laigter"] floating enable
+for_window [class="renpy"] floating enable
 
 
 
