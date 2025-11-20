@@ -453,6 +453,8 @@ bindsym XF86HomePage exec exec amixer sset Master 5%-
 bindsym XF86Favorites exec amixer sset Master toggle
 
 
+# disable touchpad (to get list xinput list)
+exec --no-startup-id xinput --disable 11
 # screen tear fix™
 exec_always xrandr --output eDP --set TearFree on
 # wallpaper
