@@ -512,6 +512,7 @@ assign [class="steam"] $ws7
 assign [class="Protonvpn-app"] $ws8
 assign [class="Stremio"] $ws8
 assign [class="AppFlowy"] $ws8
+assign [class="net-runelite-launcher-Launcher"]
 assign [class="Spotify"] $ws9
 assign [class="discord"] $ws9
 
