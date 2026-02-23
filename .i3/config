@@ -491,7 +491,8 @@ exec --no-startup-id ibus-daemon
 exec xdotool key Num_Lock
 # not launching steam on boot since it's a laptop
 # exec --no-startup-id steam
-exec --no-startup-id protonvpn-app
+# exec --no-startup-id protonvpn-app
+exec --no-startup-id mullvad-vpn
 
 
 # assign to workspaces
@@ -510,6 +511,7 @@ assign [class="zoom"] $ws5
 assign [class="Pcmanfm"] $ws6
 assign [class="steam"] $ws7
 assign [class="Protonvpn-app"] $ws8
+assign [class="Mullvad VPN"] $ws8
 assign [class="Stremio"] $ws8
 assign [class="AppFlowy"] $ws8
 assign [class="net-runelite-launcher-Launcher"] $ws8
