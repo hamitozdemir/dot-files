@@ -492,7 +492,8 @@ exec xdotool key Num_Lock
 # not launching steam on boot since it's a laptop
 # exec --no-startup-id steam
 # exec --no-startup-id protonvpn-app
-exec --no-startup-id mullvad-vpn
+# exec --no-startup-id mullvad-vpn
+exec --no-startup-id flclash
 
 
 # assign to workspaces
@@ -513,11 +514,13 @@ assign [class="Pcmanfm"] $ws6
 assign [class="steam"] $ws7
 assign [class="Protonvpn-app"] $ws8
 assign [class="Mullvad VPN"] $ws8
+assign [class="Com.follow.clash"] $ws8
 assign [class="Stremio"] $ws8
 assign [class="AppFlowy"] $ws8
 assign [class="net-runelite-launcher-Launcher"] $ws8
 assign [class="Spotify"] $ws9
 assign [class="discord"] $ws9
+assign [class="org-jdownloader-update-launcher-JDLauncher"] $ws9
 
 # after launch assigns
 for_window [class="Sl"] floating enable
@@ -535,7 +538,7 @@ for_window [class="Material Maker"] layout tabbed
 for_window [class="Aseprite"] layout tabbed
 for_window [class="laigter"] floating enable
 for_window [class="renpy"] layout tabbed
-for_window [class="PureRef"] layout tabbed
+for_window [class="PureRef"] layout tabbed 
 
 
 
