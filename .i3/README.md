@@ -38,3 +38,4 @@
 		- Only exeptions seem to be noto-fonts mentioned above, as well as CPU driver related packages.
 - `vnstat` to keep tabs on network usage. `vnstatd` for daemon, `vnstati` for image output.
   - `sudo EDITOR=/usr/bin/nano crontab -e` to setup a sudo cronjob for `@reboot sudo vnstatd -d`.
+	- `sudo rmmod pcspkr` to remove the beep after the update.
