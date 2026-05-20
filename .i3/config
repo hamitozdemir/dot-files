@@ -493,7 +493,8 @@ exec xdotool key Num_Lock
 # exec --no-startup-id steam
 # exec --no-startup-id protonvpn-app
 # exec --no-startup-id mullvad-vpn
-exec --no-startup-id flclash
+# exec --no-startup-id flclash
+exec --no-startup-id clash-verge
 
 
 # assign to workspaces
@@ -515,6 +516,7 @@ assign [class="steam"] $ws7
 assign [class="Protonvpn-app"] $ws8
 assign [class="Mullvad VPN"] $ws8
 assign [class="Com.follow.clash"] $ws8
+assign [class="Clash-verge"] $ws8
 assign [class="Stremio"] $ws8
 assign [class="AppFlowy"] $ws8
 assign [class="net-runelite-launcher-Launcher"] $ws8
@@ -538,7 +540,8 @@ for_window [class="Material Maker"] layout tabbed
 for_window [class="Aseprite"] layout tabbed
 for_window [class="laigter"] floating enable
 for_window [class="renpy"] layout tabbed
-for_window [class="PureRef"] layout tabbed 
+for_window [class="PureRef"] layout tabbed
+for_window [class="Clash-verge"] floating enable
 
 
 
