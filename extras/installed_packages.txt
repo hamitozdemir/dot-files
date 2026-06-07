@@ -1,12 +1,16 @@
 alacritty
+anki
 appflowy-bin
 bluetuith-bin
+brave-browser
 caffeine-ng
+clash-verge-rev-bin
 darktable
 discord
-dnscrypt-proxy
 dropbox
 feh
+flatpak
+flclash-bin
 gnome-disk-utility
 gnome-screenshot
 google-chrome
@@ -24,6 +28,7 @@ neo-matrix
 neofetch
 nnn
 openoffice-bin
+otf-font-awesome
 pavucontrol
 pdftk
 pipes.sh
@@ -43,9 +48,10 @@ ttf-symbola
 ttf-ubraille
 unrar
 upwork
+v2raya
 vnstat
 vtop
-wechat-appimage
+wechat-bin
 wemeet-bin
 wmctrl
 yt-dlp
